@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* SELECTORS */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    color: rgb(50,128,100);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+    font-family: sans-serif;
+}
+
+h1{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+h2{
+    font-size: 40px;
+}
+
+h3{
+    font-size: 35px;
+}
+
+h4{
+    font-size: 38px;
+}
+
+h5,h6{
+    font-size: 28px;
+}
+
+p{
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+ol,ul{
+    font-size: 20px;
+}
+
+footer{
+    font-size: 12px;
+}
+
+h3,h4,h5{
+    margin: 25px 0px;
+}
+
+li{
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+
+
+/* CLASSES AND IDS */
+.main-header{
+    background-color: antiquewhite;
+    /* margin: top right bottom left; */
+    /* margin: 10px 0px 20px 0px; */
+    
+    /* margin: top/bottom right/left */
+    /* margin: 20px 0px; */
+
+    /* margin: 20px; */
+    margin-bottom: 50px;
+}
+
+article{
+    /* background-color: orange; */
+    float: left;
+    width: 500px;
+    /* border: 1px solid black; */
+    /* margin-bottom: 30px; */
+}
+
+.related{
+    border-left: 2px solid black;
+    /* margin-top: 50px ; */
+    padding-left: 10px;
+    /* background-color: orangered; */
+    width: 300px;
+    float: right;
+    /* width: 250px; */
+    /* border: 1px solid black; */
+}
+
+footer{
+    clear: both;
+}
+
+.related-list{
+    list-style: none;
+    margin-top: 20px;
+}
+
+.container{
+    width: 850px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+/* COMBINATORS */
+/* 1. DESCENDANT SELECTORS */
+/* article p em{
+    font-style: normal;
+    font-weight: bold;
+} */
+
+/* 2. Child Selector */
+/* article>p{
+    color: orange;
+} */
+
+/* 3. Immediate/Adjacent Siblings */
+/* li+li{
+    color: red;
+} */
+
+/* 4. General Siblings */
+/* li~li{
+    color: red;
+} */
+
+/* PSUEDOCLASS */
+/* a:lvha */
+a{
+    text-decoration: none;
+    margin: 10px;
+}
+
+a:link,
+a:visited{
+    color: rgb(50,128,100);
+}
+
+a:hover{
+    color: blueviolet;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+a:active{
+    background-color: black;
+    color: azure;
+}
+
+/* STRUCTURAL PSEUDOCLASS */
+/* li:nth-child(even){
+    color: orange;
+}
+
+li:nth-child(odd){
+    color: red;
+} */
+/* 
+li:nth-child(3n+5){
+    color: red;
+} */
+
+a:last-child{
+    margin-right: 0;
+}
+
+li:last-child{
+    margin-bottom: 0;
+}
+
+
+/* FLOATS and CLEARFIX */
+.main-header__heading{
+    float: left;
+}
+
+.main-header__nav{
+    float: right;
+}
+
+.clearfix{
+    clear: both;
+}
