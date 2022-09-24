@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.ancestor,
+.grandparent,
+.parent,
+.child{
+    min-height: 50px;
+    /* margin: 10px; */
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.grandparent{
+    position: relative;
+}
+
+.child{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: orangered;
+    font-weight: bold;
+    border: 1px solid saddlebrown;
+    z-index: 4;
+}
