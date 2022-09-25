@@ -4,6 +4,7 @@
     font-size: larger;
     font-weight: bold;
     border: 1px solid black;
+    text-align: center;
 }
 
 .el-1{
@@ -40,4 +41,5 @@
     grid-template-rows: repeat(3,1fr);
     grid-template-columns: repeat(3,1fr);
     justify-items: center;
+    /* justify-content: start; */
 }

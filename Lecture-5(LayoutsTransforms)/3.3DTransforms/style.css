@@ -1,0 +1,44 @@
+body{
+    perspective: 800px;
+}
+
+.wrap{
+    height: 250px;
+    width: 200px;
+    background-color: antiquewhite;
+    margin: auto;
+    margin-top: 80px;
+    transform-style: preserve-3d;
+}
+
+.side-a,
+.side-b{
+    position: absolute;
+}
+
+.side-a{
+    height: 250px;
+    width: 200px;
+    z-index: 1;
+    background: url('/img1.jpg');
+    background-size: cover;
+}
+
+.side-b{
+    background-color: rgb(231, 231, 231);
+    height: 250px;
+    width: 200px;
+    transform: rotateY(180deg);
+}
+
+.wrap div{
+    backface-visibility: hidden;
+}
+
+.wrap{
+    transition-duration: 2s;
+}
+
+.wrap:hover{
+    transform: rotateY(180deg);
+}
