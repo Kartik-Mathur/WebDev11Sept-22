@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .float-left {
+            float: left;
+        }
+
+        .float-right {
+            float: right;
+            width: 250px;
+        }
+
+        .clear-fix::after{
+            content: "";
+            clear: both;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="main-header">
+            <h1 class="main-header__heading">📘 The Coding Blocks Magazine</h1>
+            <nav class="main-header__nav">
+                <a href="#">Home</a>
+                <a href="#">Courses</a>
+                <a href="#">Get Hired</a>
+                <a href="#">About Us</a>
+            </nav>
+            <div class="clearfix"></div>
+        </header>
+
+        <article class="post">
+            <header class="post-header">
+                <h2>Master Web Development</h2>
+                <img src="./images/kartik.png" height="50px" />
+                <p>Mentor at Coding Blocks, teaching C++, Web and CP.</p>
+            </header>
+
+            <h3>About Coding Blocks</h3>
+            <div class="clear-fix">
+                <img class="float-left" src="./images/img1.jpg" height="150px" />
+                <p class="float-right">
+                    Coding Blocks was founded in 2014 with a mission to create skilled
+                    Software Engineers for our country and the world. We are here to
+                    bridge the gap <em>between</em> the quality of skills demanded by industry and
+                    the quality of skills imparted by conventional institutes.
+                    <br /><br />Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Reprehenderit facilis fugiat perspiciatis a tempora quae omnis natus
+                    inventore eveniet officiis iusto tenetur provident, quasi numquam!
+                    Facere est error itaque esse.
+                </p>
+                <!-- <div class="clearfix"></div> -->
+
+            </div>
+
+
+            <h4>Types of Courses Offered</h4>
+            <ul>
+                <li>C++</li>
+                <li>Java</li>
+                <li>Python</li>
+                <li>Web Dev</li>
+                <li>ML</li>
+            </ul>
+
+            <h5>Why Learn Programming?</h5>
+            <ol>
+                <li>Money</li>
+                <li>Placements</li>
+                <li>Logical Thinking</li>
+                <li>Skills</li>
+            </ol>
+        </article>
+
+        <aside class="related">
+            <h6>Related Posts</h6>
+            <ul class="related-list">
+                <li>
+                    <img src="./images/img2.jpg" height="70px" />
+                    <a href="#">Learn C++</a>
+                </li>
+                <li>
+                    <img src="./images/img3.jpg" height="70px" />
+                    <a href="#">Learn Java</a>
+                </li>
+                <li>
+                    <img src="./images/img1.jpg" height="70px" />
+                    <a href="#">Learn Python</a>
+                </li>
+            </ul>
+        </aside>
+
+        <footer class="footer">
+            <small>
+                Copy Right by @<strong>C</strong>oding<strong>B</strong>locks
+            </small>
+        </footer>
+    </div>
+</body>
+
+</html>

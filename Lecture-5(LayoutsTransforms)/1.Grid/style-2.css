@@ -1,0 +1,43 @@
+.el{
+    height: 50px;
+    width: 50px;
+    font-size: larger;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+.el-1{
+    background-color: aqua;
+}
+.el-2{
+    background-color: burlywood;
+}
+.el-3{
+    background-color: purple; 
+    color: white;
+}
+.el-4{
+    background-color: orange;
+}
+.el-5{
+    background-color: orangered; 
+    color: white;
+}
+
+.el-6{background-color: green;}
+.el-7{background-color: yellow;}
+.el-8{background-color: pink;}
+.el-9{background-color: khaki;}
+
+.container{
+    border: 3px solid rebeccapurple;
+    display: grid;
+    width: 400px;
+    height: 300px;
+    /* row-gap: 10px;
+    column-gap: 10px; */
+    gap: 10px 10px;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+}
