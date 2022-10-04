@@ -1,0 +1,54 @@
+.el {
+    font-size: larger;
+    font-weight: bold;
+    height: 400px;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.el-1{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    width: 100%;
+    background-color: purple;
+}
+
+.el-3 {
+    color: white;
+}
+
+.el-5 {
+    color: white;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    justify-content: center;
+    width: 900px;
+    margin: auto;
+}
+
+
+.inner-el{
+    height: 100%;
+    width: 100%;
+    background-color: orange;
+}
+
+.inner-el-1{
+    background-color: gainsboro;
+}
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.flex-container-item{
+    height: 70px;
+    width: 70px;
+    border: 1px solid black;
+}

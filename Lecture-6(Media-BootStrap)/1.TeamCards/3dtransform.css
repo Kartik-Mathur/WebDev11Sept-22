@@ -1,0 +1,43 @@
+body{
+    perspective: 800px;
+}
+
+.wrap{
+    height: 250px;
+    width: 100%;
+    background-color: antiquewhite;
+    transform-style: preserve-3d;
+}
+
+.side-a,
+.side-b{
+    position: absolute;
+}
+
+.side-a{
+    background-color: orange;
+    height: 250px;
+    width: 100%;
+    z-index: 1;
+    background: url('./img1.jpg');
+    background-size: cover;
+}
+
+.side-b{
+    background-color: rgb(231, 231, 231);
+    height: 250px;
+    width: 100%;
+    transform: rotateY(180deg);
+}
+
+.wrap div{
+    backface-visibility: hidden;
+}
+
+.wrap{
+    transition-duration: 2s;
+}
+
+.wrap:hover{
+    transform: rotateY(180deg);
+}

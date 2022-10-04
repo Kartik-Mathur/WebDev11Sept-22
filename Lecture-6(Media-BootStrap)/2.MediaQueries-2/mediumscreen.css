@@ -1,0 +1,21 @@
+.el {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.el-3 {
+    color: white;
+}
+
+.el-5 {
+    color: white;
+}
+.container {
+    margin: auto;
+    display: grid;
+    /* width: 100%; */
+    grid-template-columns: repeat(2, 200px);
+    /* grid-template-rows: repeat(3,250px); */
+    gap: 20px 40px;
+    justify-content: center;
+}
