@@ -1,4 +1,19 @@
 body{
     background: url('./Space.png');
     background-repeat: repeat-x;
+    background-color: rgb(95, 112, 133);
+}
+
+
+.rocket{
+    transform: rotateZ(45deg);
+    position: absolute;
+    top: 500px;
+    left: 600px;
+}
+
+.cody{
+    position: absolute;
+    top: 500px;
+    left: -400px;
 }

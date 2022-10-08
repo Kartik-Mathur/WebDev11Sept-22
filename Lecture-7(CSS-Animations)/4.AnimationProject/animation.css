@@ -1,0 +1,80 @@
+.rocket-wrapper {
+    animation-name: rocket-move;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    /* transition: transform; */
+}
+
+.cody{
+    animation: cody-move 2s infinite ease-in-out,
+                bring-cody-back 5s 3s ease-in-out forwards,
+                cody-enter-rocket 3s 8s ease-in-out forwards;
+    /* animation-name: cody-move;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;  */
+}
+
+body{
+    animation-name: background-move;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rocket-move {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(50px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes cody-move {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(50px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bring-cody-back{
+    100%{
+      left: 450px;  
+    }
+}
+
+@keyframes background-move {
+    0%{
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: -5000px 0;
+    }
+}
+
+
+@keyframes cody-enter-rocket{
+    50%{
+        top: 600px;
+        left: 700px;
+        transform: scale(50%);
+    }
+    100%{
+        top: 600px;
+        left: 750px;
+        transform: scale(0%);
+    }
+}
