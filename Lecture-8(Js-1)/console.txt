@@ -1,0 +1,8 @@
+let str = "Hello world! Learning Strings in JS";
+undefined
+str.toLowerCase()
+'hello world! learning strings in js'
+str.toUpperCase()
+'HELLO WORLD! LEARNING STRINGS IN JS'
+str
+'Hello world! Learning Strings in JS'
