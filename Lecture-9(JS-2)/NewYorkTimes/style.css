@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.icon{
+    height: 20px;
+}
+
+.flexbox{
+    display: flex;
+    justify-content: space-between;
+}
+
+.flexbox-main-rule{
+    display: flex;
+    justify-content: center;
+}
+
+.category{
+    margin: 5px 10px;
+}
+
+.language{
+    /* border: 1px solid black; */
+    margin: 0 5px;
+}
+
+.container{
+    width: 1200px;
+    margin: auto;
+}
+
+.navbar{
+    margin-top: 10px;
+}
+
+main{
+    margin-top: 10px;
+}
+
+.newyorkheading img{
+    height: 80px;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:link{
+    color: black;
+}
+a:visited{
+    color: black;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+.weather-item{
+    margin: 0 2px;
+}
+
+.main-rule{
+    color: rgb(238, 238, 238);
+}
+
+.double-border{
+    height: 2px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
