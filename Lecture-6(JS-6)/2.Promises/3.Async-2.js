@@ -41,17 +41,30 @@ function uploadFile(compressedFile){
 
 let url = 'http://abc.com/img.jpg';
 download(url)
-    .then(function (downloadedFile) {
-        console.log("Downloaded File Success", downloadedFile);
-        return compression(downloadedFile)
-    })
-    .then(function(compressedFile){
-        console.log("Compression success",compressedFile);
-        return uploadFile(compressedFile)
-    })
+    .then(compression)
+    .then(uploadFile)
     .then(function(newUrl){
         console.log("Upload success",newUrl);
+        return "All Done";
+    })
+    .then((msg)=>{
+        console.log(msg);
     })
     .catch(function(err){
         console.log(err.message);
     })
+// download(url)
+//     .then(function (downloadedFile) {
+//         console.log("Downloaded File Success", downloadedFile);
+//         return compression(downloadedFile)
+//     })
+//     .then(function(compressedFile){
+//         console.log("Compression success",compressedFile);
+//         return uploadFile(compressedFile)
+//     })
+//     .then(function(newUrl){
+//         console.log("Upload success",newUrl);
+//     })
+//     .catch(function(err){
+//         console.log(err.message);
+//     })
