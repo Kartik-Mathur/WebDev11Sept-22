@@ -10,8 +10,12 @@ btn1.onclick = function(){
     console.log("Screeeaaaaaammmmmmmmmm!!!!!!");
 }
 
-document.onkeypress = function(ev){
-    // console.log(ev);
+btn1.onclick = function(){
+    console.log("Chilaaanaaaaaaaaaaaaaaa!!!!!!");
+}
+
+document.onkeyup = function(ev){
+    console.log(ev);
     if(ev.key == 'k'){
         console.log('Kartik');
     }

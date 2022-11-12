@@ -1,0 +1,10 @@
+.changeColor{
+    background-color: coral;
+}
+
+button{
+    padding: 20px;
+    background-color: cornflowerblue;
+    border: '1px dotted black';
+    margin: 20px;
+}
