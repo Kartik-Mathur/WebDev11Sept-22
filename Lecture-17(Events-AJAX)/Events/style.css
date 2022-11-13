@@ -1,0 +1,10 @@
+#grandfather,
+#father,
+#mother{
+    min-width: 500px;
+    min-height: 300px;
+    padding: 50px;
+    margin: 50px;
+    border: 5px solid black;
+    font-size: 45px;
+}
