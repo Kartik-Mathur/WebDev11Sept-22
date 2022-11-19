@@ -14,3 +14,20 @@
     border: 2px solid black;
     text-align: center;
 }
+
+#btn{
+    padding: 20px;
+    margin: auto;
+    font-family: sans-serif;
+    font-size: 40px;
+    
+}
+
+.changeColor{
+    background-color: grey;
+    color: white;
+}
+
+.gayab{
+    display: none;
+}
