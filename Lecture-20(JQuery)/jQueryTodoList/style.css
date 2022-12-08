@@ -1,0 +1,4 @@
+#taskList:first-child,
+#taskList:last-child{
+    visibility: hidden;
+}

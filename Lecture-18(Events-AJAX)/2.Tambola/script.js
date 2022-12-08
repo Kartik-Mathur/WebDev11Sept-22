@@ -24,6 +24,7 @@ btn.addEventListener('click', (ev) => {
                 let item = document.querySelector('#item-' + itemId);
                 console.log(item);
                 item.classList.add('changeColor');
+                item.classList.add('gayab');
                 return false;
             }
             return true;
