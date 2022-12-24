@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .show-inline{
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>TodoList</h1>
+    <form action="/addtask" method="POST">
+        <input type="text" name="newtask" id="newtask">
+        <button type="submit">Add Task</button>
+    </form>
+
+    <ul>
+        {{#each todos as |todo|}}
+
+        <li>
+            {{todo.task}}
+            <form class="show-inline" action="/deletetask" method="GET">
+                <input type="hidden" name="id" value={{todo.id}}>
+                <button type="submit">❌</button>
+            </form>
+
+            <form class="show-inline" action="/increase" method="GET">
+                <input type="hidden" name="id" value={{todo.id}}>
+                <button type="submit">⬆️</button>
+            </form>
+
+             <form class="show-inline" action="/decrease" method="GET">
+                <input type="hidden" name="id" value={{todo.id}}>
+                <button type="submit">⬇️</button>
+            </form>
+        </li>
+
+
+        {{/each}}
+    </ul>
+</body>
+
+</html>
