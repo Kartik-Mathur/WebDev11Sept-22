@@ -1,0 +1,8 @@
+<div class="blogList">
+    <h1>Blogs</h1> <br>
+    {{#each blogs as |blog|}}
+    <div class="blogListItem">
+        <b>{{blog.username}}</b> : {{blog.blogContent}}
+    </div>
+    {{/each}}
+</div>
