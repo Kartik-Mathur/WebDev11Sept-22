@@ -1,0 +1,23 @@
+[
+    {
+        "id":1
+        "name":"Abhinav",
+        "tweet":"adbasbdasdasbkdbaa",
+        "tweet_img":"http://localhost/img.png"
+        "comments":[
+            {
+                "comment":"akdjakdj",
+                "userid":2
+            },
+            {
+                "comment":"sdfaraw",
+                "userid":3
+            },
+            {
+                "comment":"dgrfwe",
+                "userid":3
+            }
+        ],
+        "likes":[1,2,3,4,5,6]
+    }
+]
