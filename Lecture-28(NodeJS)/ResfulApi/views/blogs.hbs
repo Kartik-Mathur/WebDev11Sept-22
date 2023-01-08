@@ -18,8 +18,12 @@
 <body>
     {{> nav}}
     <br>
-
-    {{> blogsList}}
+    {{#if blogsPresent}}
+        {{> blogsList}}
+    {{else}}    
+        <h4>Currently there are no blogs</h4>
+    {{/if}}
+    
     <br>
     <br>
     <hr>

@@ -20,7 +20,7 @@
     <br>
     <div class="container">
         <h1>Edit Blog by {{username}}</h1>
-        <form action="/blogs/{{id}}" method="POST">
+        <form action="/blogs/{{id}}?_method=PUT" method="POST">
            <label for="username">Username: </label>
             <input value="{{username}}" type="text" id="username" name="username" placeholder="Enter username">
             <br>

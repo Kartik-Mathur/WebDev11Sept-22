@@ -4,13 +4,18 @@ const PORT = 4444;
 const hbs = require('hbs');
 const path = require('path');
 
+const methodOverride = require('method-override');
+const { parse } = require('path');
+ 
+app.use(methodOverride('_method'));
+
 app.use(express.static(path.join(__dirname,'static')));
 app.set('view engine','hbs');
 app.use(express.urlencoded({extended: true}));
 
 hbs.registerPartials(__dirname + '/views/partials');
 let num = 4;
-const blogs = [
+let blogs = [
     {
         id: 1,
         username: 'Abhinav',
@@ -33,7 +38,8 @@ const blogs = [
 // GET ALL THE BLOGS
 app.get('/blogs',(req,res)=>{
     res.render('blogs',{
-        blogs: blogs
+        blogs: blogs,
+        blogsPresent: blogs.length>0
     });
 })
 
@@ -71,6 +77,30 @@ app.get('/blogs/:id/edit',(req,res)=>{
     res.render('editBlog',myBlog[0]);
 })
 
+//  Update a particular blog
+app.put('/blogs/:id',(req,res)=>{
+    const {id} = req.params;
+    let myBlogIndex;
+    blogs.map((blog,indx)=>{
+        if(blog.id == parseInt(id)){
+            myBlogIndex = indx;
+        }
+    })
+    const {username,blogContent} = req.body;
+    // console.log(username,blogContent);
+    blogs[myBlogIndex].username = username;
+    blogs[myBlogIndex].blogContent = blogContent;
+
+    res.redirect('/blogs');
+})
+
+// DELETE A BLOG
+app.delete('/blogs/:id',(req,res)=>{
+    const {id} = req.params;
+    const newBlogs = blogs.filter((blog)=>blog.id!==parseInt(id));
+    blogs =  newBlogs;
+    res.redirect('/blogs');
+})
 
 app.listen(PORT,()=>{
     console.log(`http://localhost:${PORT}`);
