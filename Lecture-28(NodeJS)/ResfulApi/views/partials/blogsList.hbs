@@ -1,0 +1,11 @@
+<div class="blogList">
+    <h1>Blogs</h1> <br>
+    {{#each blogs as |blog|}}
+    <div class="blogListItem">
+        <b>{{blog.username}}</b> : {{blog.blogContent}}
+        <form action="/blogs/{{blog.id}}" method="GET">
+            <button>Show</button>
+        </form>
+    </div>
+    {{/each}}
+</div>
