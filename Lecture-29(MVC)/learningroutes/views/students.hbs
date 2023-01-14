@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Students List</h1>
+
+    {{#each students as |student|}}
+        <li>
+            Name: {{student.name}} <br>
+            Age: {{student.age}} <br>
+            Marks: {{student.marks}} <br>
+            Subject: {{student.subject}}<br>
+            <a href="/students/{{student.id}}">Show Details</a>
+        </li><br>
+        
+    {{/each}}
+</body>
+</html>
