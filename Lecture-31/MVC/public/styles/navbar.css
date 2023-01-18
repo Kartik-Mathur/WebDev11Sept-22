@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.myNavbar{
+    /* width: 900px; */
+    margin: auto;
+    background-color: rgb(67, 170, 170);
+    padding: 10px;
+}
+
+.myNavElement{
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.myNavElement:link{
+    color: white;
+}
+
+.myNavElement:visited{
+    color: white;
+}
+
+.myNavElement:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+.myNavElement:active{
+    color: white;
+}
