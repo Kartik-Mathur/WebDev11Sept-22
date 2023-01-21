@@ -12,7 +12,8 @@
 
     {{#each blogs as |blog|}}
         <li>
-            {{blog.username}} : {{blog.blogContent}}
+            {{blog.title}} <br> {{blog.description}} <br> 
+            <img style="height: 250px;" src="{{blog.image}}">
         </li>
     {{/each}}
 </body>
