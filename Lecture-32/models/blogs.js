@@ -1,5 +1,5 @@
 const getDb = require('../databases/database').getDb;
-
+const mongodb = require('mongodb');
 class Blogs {
     constructor(title, description, image) {
         this.title = title;
@@ -26,6 +26,32 @@ class Blogs {
         return db.collection('blogs')
                 .find()
                 .toArray();
+    }
+
+    static getBlogDetails(blogId){
+        const db = getDb();
+        return db.collection('blogs')
+            .find({
+                _id: new mongodb.ObjectId(blogId)
+            })
+            .next()
+            .then((blog)=>{
+                console.log(blog);
+                return blog;
+            })
+            .catch(err=>console.log(err));
+    }
+
+    static deleteBlog(blogId){
+        const db = getDb();
+        return db.collection('blogs')
+            .deleteOne({
+                _id: new mongodb.ObjectId(blogId)
+            })
+            .then(()=>{
+                console.log("Deletion success");
+            })
+            .catch(err=>console.log(err));
     }
 }
 

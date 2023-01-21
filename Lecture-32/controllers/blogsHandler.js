@@ -52,3 +52,31 @@ module.exports.postCreateBlogs = (req, res, next) => {
         })
         .catch(err => console.log(err));
 }
+
+module.exports.getBlogDetails = (req, res, next) => {
+    const { blogId } = req.params;
+    Blogs.getBlogDetails(blogId)
+        .then((blog) => {
+            res.render('blogDetails', { blog });
+        })
+
+}
+
+module.exports.getDeleteBlog = (req, res, next) => {
+    const { blogId } = req.params;
+    Blogs.deleteBlog(blogId)
+        .then(() => {
+            res.redirect('/blogs');
+        })
+
+}
+
+module.exports.getUpdateBlog = (req, res, next) => {
+    const { blogId } = req.params;
+    Blogs.getBlogDetails(blogId)
+        .then((blog) => {
+            res.render('updateBlog', {
+                blog
+            })
+        })
+}
