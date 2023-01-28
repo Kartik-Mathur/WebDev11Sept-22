@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blogs {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .container {
+            width: 500px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Blogs-List</h1>
+    <div class="container">
+        {{#each blogs as |blog|}}
+        <div class="blogs">
+            <img src="{{blog.imageUrl}}" width="50%"><br>
+            <h4>Title: {{blog.title}}</h4>
+            <p>Blog: {{blog.blogContent}}</p>
+            <button>
+                <a href="/showdetails/{{blog._id}}">Show Details</a>
+            </button>
+        </div>
+
+        {{/each}}
+    </div>
+</body>
+
+</html>

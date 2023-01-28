@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/styles/navbar.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+   
+
+ <script src="/js/script.js"></script>
 </head>
 <body>  
     {{> navbar}}
@@ -15,7 +20,7 @@
             {{blog.title}} <br> {{blog.description}} <br> 
             <img style="height: 250px;" src="{{blog.image}}">
 
-            <a href="/blogs/details/{{blog._id}}">Show Details</a>
+            <a class="showDetails" href="/blogs/details/{{blog._id}}">Show Details</a>
         </li>
     {{/each}}
 </body>

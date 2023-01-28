@@ -5,6 +5,8 @@ class Users{
     constructor(username,email){
         this.username = username;
         this.email = email;
+        // cart=[]
+        // {blogId:"asada",quantity:2}
     }
 
     save(){
@@ -26,8 +28,8 @@ class Users{
         })
         .next()
         .then((user)=>{
-            // return user;
-            console.log(user);
+            return user;
+            // console.log(user);
         })
         .catch(err=>console.log(err));
     }

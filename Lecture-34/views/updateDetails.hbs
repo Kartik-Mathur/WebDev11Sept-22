@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blogs {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .container {
+            width: 500px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Blogs-{{blog.title}}</h1>
+    <div class="container">
+        <form action="/updateDetails" method="POST">
+            <div class="blogs">
+                Title: <input type="text" value={{blog.title}} name="title" placeholder="title"><br>
+                Blog: <input type="text" value={{blog.blogContent}} name="blogContent" placeholder="blogContent"><br>
+                imageUrl: <input type="text" value={{blog.imageUrl}} name="imageUrl" placeholder="imageUrl">
+                <input type="hidden" value={{blog._id}} name="blogId">
+            </div>
+
+            <button type="submit">Update</button>
+        </form>
+    </div>
+</body>
+
+</html>

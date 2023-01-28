@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use((req,res,next)=>{
     User.findById("63ccf2df30750fcb5c2cfc0f")
     .then((user)=>{
-        console.log(user);
+        console.log("At Start: ",user);
         req.user = user;
         next();
     }).catch(err=>console.log(err));

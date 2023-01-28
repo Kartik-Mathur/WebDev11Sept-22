@@ -43,6 +43,7 @@ module.exports.postCreateBlogs = (req, res, next) => {
     const title = req.body.title;
     const description = req.body.description;
     const imageUrl = req.body.imageUrl;
+    console.log("Inside post create: ",req.user);
     const userId = req.user._id;
     let newBlog = new Blogs(title, description, imageUrl,userId);
     newBlog
