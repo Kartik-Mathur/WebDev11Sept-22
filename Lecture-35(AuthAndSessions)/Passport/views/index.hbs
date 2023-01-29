@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Facebook</h1>
+    <form method="POST" action="/login">
+        <input type="text" placeholder="username" name="username" id="username"><br>
+        <input type="password" placeholder="password" name="password" id="password"><br>
+
+        <button type="submit">LOGIN</button>
+    </form>
+    <form action="/auth/facebook">
+        <button type="submit">Login with Facebook?</button>
+    </form>
+    <p>
+        New User? Signup Instead <a href="/signup">Signup</a>
+    </p>
+</body>
+</html>
