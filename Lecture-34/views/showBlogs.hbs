@@ -24,12 +24,14 @@
     <div class="container">
         {{#each blogs as |blog|}}
         <div class="blogs">
+            Username: {{blog.userId.username}}<br>
             <img src="{{blog.imageUrl}}" width="50%"><br>
             <h4>Title: {{blog.title}}</h4>
             <p>Blog: {{blog.blogContent}}</p>
             <button>
                 <a href="/showdetails/{{blog._id}}">Show Details</a>
             </button>
+            
         </div>
 
         {{/each}}

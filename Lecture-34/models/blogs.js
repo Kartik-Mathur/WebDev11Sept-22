@@ -9,7 +9,11 @@ const blogSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    imageUrl: String
+    imageUrl: String,
+    userId:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref:'users' // Model name
+    }
 });
 
 module.exports = mongoose.model('blog',blogSchema);
