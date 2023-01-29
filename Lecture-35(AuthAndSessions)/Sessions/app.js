@@ -3,14 +3,20 @@ const app = express();
 const PORT = 4444;
 const session = require('express-session');
 app.set('view engine', 'hbs');
+const MongoDBStore = require('connect-mongodb-session')(session);
+const store = new MongoDBStore({
+    uri: 'mongodb://localhost:27017/connect_mongodb_session_test',
+    collection: 'mySessions'
+});
 
 app.use(session({
     secret: 'ndawjkd jkwebkqbdbkjwqkdkqbwdkbqwkb',
     resave: false,
     saveUninitialized: true,
-    cookie:{
+    cookie: {
         // maxAge: 10000
-    }
+    },
+    store: store
 }))
 
 app.get('/', (req, res) => {
@@ -30,18 +36,18 @@ app.get('/login', (req, res) => {
 app.get('/profile', (req, res) => {
     if (req.session.loggedIn) {
 
-        res.render('profile',{
+        res.render('profile', {
             username: req.session.username,
             password: req.session.password,
             newfeature: req.session.newFeature == true
         });
     }
-    else{
+    else {
         res.redirect('/');
     }
 })
 
-app.get('/logout',(req,res)=>{
+app.get('/logout', (req, res) => {
     req.session.destroy();
     res.redirect('/');
 })
