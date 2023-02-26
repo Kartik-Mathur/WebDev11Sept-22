@@ -1,0 +1,12 @@
+.box{
+    border: 1px solid black;
+    box-shadow: 10px 10px 10px #ccc;
+    padding: 15px;
+    margin: 10px 30px;
+    width: 200px;
+    display: inline-block;
+}
+.img{
+    width: 100%;
+}
+
