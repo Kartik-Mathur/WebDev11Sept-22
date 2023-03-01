@@ -15,7 +15,7 @@ function App() {
 
   const [name, setName] = useState('');
   const userRef = useRef('');
-  const [users, setUsers] = useState(user);
+  const [users, setUsers] = useState(JSON.parse(localStorage.getItem('users')) || [] );
   function inputChangeHandler(ev) {
     setName(userRef.current.value);
     console.log("User Ref value",userRef.current.value);
@@ -26,6 +26,7 @@ function App() {
     setName('');
     userRef.current.value = '';
     console.log(name);
+    localStorage.setItem('users',JSON.stringify(users));
   },[users]);
 
   function submitHandler(e) {

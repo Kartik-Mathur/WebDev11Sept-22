@@ -1,0 +1,25 @@
+.nav-item{
+    margin: 10px;
+}
+
+.navbar{
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    background-color: rgba(255, 147, 6, 0.753);
+}
+
+.nav-item:link{
+    color: black;
+    text-decoration: none;
+}
+
+.nav-item:visited{
+    color: black;
+}
+
+.nav-item:hover{
+    color: black;
+    text-decoration: underline;
+}
