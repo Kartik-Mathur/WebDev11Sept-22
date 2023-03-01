@@ -5,7 +5,6 @@ import FoodDetails from '../FoodDetails/FoodDetails';
 import Home from '../Home/Home';
 import { Routes, Route, BrowserRouter, Link } from "react-router-dom";
 const Foodapp = () => {
-
     return (
         <BrowserRouter>
             <nav className={styles['navbar']}>
@@ -13,7 +12,7 @@ const Foodapp = () => {
                 <Link className={styles['nav-item']} to="food">Food</Link>
                 <Link className={styles['nav-item']} to="cart">Cart</Link>
             </nav>
-            
+
             <Routes>
                 <Route path="home" element={<Home />} />
                 <Route path="cart" element={<Cart />} />

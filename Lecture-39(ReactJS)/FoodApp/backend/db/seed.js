@@ -1,0 +1,36 @@
+const Foods = require('../model/Food');
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://127.0.0.1:27017/foodapp-1march')
+    .then(() => {
+        console.log("Connected to mongoDB");
+    }).catch(err => console.log(err));
+
+let Dummy_Data = [
+    {
+        name: 'Butter Chicken',
+        imageUrl: 'data:image/jpeg;base64,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',
+        description: 'Made with Love'
+    },
+    {
+        name: 'Momos',
+        imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaDctJSEvvilHwOQengc5cKSpJN8Hv2sUokQ&usqp=CAU',
+        description: 'Made with Extra Love'
+    },
+    {
+        name: 'Fanta wali Maggi',
+        imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR7GwFbncb-I01gL5Ug32H1Q_8sOhx8gHsnbjgdy2bqw&s',
+        description: 'Anth Nikat Hai'
+    }
+]
+
+async function seedDB() {
+    try {
+        await Foods.insertMany(Dummy_Data);
+        console.log("DB SEEDED");
+    }
+    catch(e){
+        console.log("Data enter nahi ho paaya");
+    }
+}
+
+seedDB();
